@@ -1,0 +1,59 @@
+{%extends 'theme.html'%}
+
+{%block content%}
+
+<!-- Image and text -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        Filmstream
+    </a>
+</nav>
+{%if messages%}
+{%for m in messages%}
+<div class='alert alert-success' role='alert'>{{m}}<button type='button' class='close' data-dismiss='alert'
+        aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>
+{%endfor%}
+{%endif%}
+{%load static%}
+<!-- carousel -->
+
+
+
+<!-- horizontal scroll -->
+<div class="container-fluid" id="#cards" style="margin:0px;padding:2.5px;">
+    <h5> Latest releases-</h5>
+    <div class="horizontalbox">
+        {%for film in films%}
+        <div class="card-1">
+            <a href="{%url 'home:video_page' film.title%}">
+                <img class="d-block w-100 h-100" style="object-fit: cover;" src='{{film.thumbnail.url}}'>
+            </a>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+
+
+<br>
+<hr>
+{% load tags %}
+<div class="container">
+<h1>Your History-</h1>
+<ol type="1">
+{%for title in history%}
+<h3><li>{%remove_uderscore title%}</li></h3>
+{%endfor%}
+</ol>
+</div>
+
+
+
+<script>
+    function autoRefreshPage()
+    {
+        window.location = window.location.href;
+    }
+    setInterval('autoRefreshPage()', 10000);
+</script>
+{%endblock%}

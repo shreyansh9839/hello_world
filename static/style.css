@@ -1,0 +1,150 @@
+:root {
+--default-font-size : 14px;
+--bg-colour : #eee;
+--text-colour : #666;
+--empty-div-bg-colour : grey;  
+--border-curve : 13px;
+}
+body{
+font-size: var(--default-font-size);
+background: var(--bg-colour);
+color: var(--text-colour);
+}
+
+.d-block{
+background-color:var(--empty-div-bg-colour);
+border-radius: var(--border-curve);
+width: 100%;
+}
+
+.horizontalbox{
+height:100px;
+overflow-x : scroll;
+overflow-y: hidden;
+white-space: nowrap;
+padding-left : 2.5px;
+padding-right: 2.5px;
+}
+
+.horizontalbox::-webkit-scrollbar{
+display:none;
+}
+
+.card-1{
+border-radius: var(--border-curve);
+display: inline-block;
+margin: 5px 2.5px 5px 2.5px;
+height: 90%;
+width:100px;
+background-size: cover;
+}
+
+.horizontalbox::-webkit-scrollbar{
+display:none;
+}
+
+.card-1{
+border-radius: var(--border-curve);
+display: inline-block;
+margin: 5px 2.5px 5px 2.5px;
+height: 90%;
+width:100px;
+background-size: cover;
+}
+
+
+.d-block {
+    background-color: grey;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.horizontalbox {
+    height: 100px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+}
+
+
+.login-container {
+height: 90vh;
+width: 100%;
+}
+
+.login-form {
+max-width: 100%;
+width: 370px;
+padding: 15px;
+margin: auto;
+}
+
+
+#videobox {
+margin-left: auto;
+margin-right: auto;
+background-color: lightgrey;
+text-align: center;
+border-radius: 5px;
+padding-top: 10px;
+padding-bottom: 5px;
+}
+
+video[poster] {
+object-fit: cover;
+width: 100%;
+}
+
+@media screen and (min-width: 360px) {
+    .card-1 {
+        width: 100px;
+    }
+
+    .horizontalbox {
+        height: 150px;
+    }
+    .container {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .d-block {
+        height: 60vh;
+        object-fit: cover;
+    }
+
+    .card-1 {
+        width: 170px;
+    }
+
+    .horizontalbox {
+        height: 200px;
+    }
+    .container {
+        width: 700px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .d-block {
+        object-fit: cover;
+    }
+
+    .card-1 {
+        width: 170px;
+    }
+
+    .horizontalbox{
+        overflow-x : scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-left : 2.5px;
+        padding-right: 2.5px;
+        }
+}

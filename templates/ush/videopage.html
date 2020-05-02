@@ -1,0 +1,18 @@
+{%extends 'theme.html'%}
+
+
+{%block content%}
+<br>
+<div class="container" id="videobox">
+    <h1 align="left">{{video.title}}</h1>
+    <video width="100%" controls poster="{{video.thumbnail.url}}">
+        <source src="{{ video.videofile.url }}" type='video/mp4'>
+    </video>
+    <h6 align="left">{{video.rating}}</h6>
+    <hr>
+    <p style="text-align: left;">{{video.description}}</p>
+</div>
+<hr>
+<br>
+<a href="{%url 'home:index'%}">Back</a>
+{% endblock %}
